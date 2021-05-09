@@ -12,9 +12,11 @@ public class DataAniversarioController {
         aniversarioAlison.ano = 1989;
 
         DataAniversario aniversarioJk = new DataAniversario();
-        aniversarioJk.dia = 17;
-        aniversarioJk.mes = 03;
-        aniversarioJk.ano = 1993;
+//        aniversarioJk.dia = 17;
+//        aniversarioJk.mes = 03;
+//        aniversarioJk.ano = 1993;
+
+        DataAniversario aniversarioCelia = new DataAniversario(15,05,1964);
 
         Scanner entrada = new Scanner(System.in);
         String aniversario = "";
@@ -26,12 +28,13 @@ public class DataAniversarioController {
             switch (aniversario) {
 
                 case "alison": case "alisu":
-                    System.out.printf("A data de aniversário do Alisu é %d/%d/%d.\n",
-                            aniversarioAlison.dia, aniversarioAlison.mes, aniversarioAlison.ano);
+                    System.out.printf("A data de aniversário do Alisu é %s", aniversarioAlison.dataFormatada() + ".\n");
                     break;
                 case "jk":
-                    System.out.printf("A data de aniversário do Jacons é %d/%d/%d.\n",
-                            aniversarioJk.dia, aniversarioJk.mes, aniversarioJk.ano);
+                    System.out.printf("A data de aniversário do Jacons é %s", aniversarioJk.dataFormatada() + ".\n");
+                    break;
+                case "celia":
+                    System.out.printf("A data de aniversário da Célia é %s", aniversarioCelia.dataFormatada() + ".\n");
                     break;
                 case "sair":
                     System.out.println("Valeu é nóis\n");
