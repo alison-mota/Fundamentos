@@ -4,7 +4,7 @@ public class Produto {
 
     String nome;
     double preco;
-    double desconto;
+    final static double desconto = 0.25;
 
     double precoComDesconto(){
         return preco * (1 - desconto);
